@@ -1,38 +1,6 @@
-const quotes = [
-    {
-        name: "Damian Puister",
-        quote: "1 bier is geen bier."
-    },
-    {
-        name: "Pascal Huberts",
-        quote: "Gepenetreerde kanker moeder."
-    },
-    {
-        name: "Harm Brouwer",
-        quote: "Ik word genomen in me achterste door mijn eerste biertje."
-    },
-    {
-        name: "Jurrie Piek",
-        quote: "Dronken ben ik nooit geweest."
-    },
-    {
-        name: "Bas Top",
-        quote: "Huub huub motherfucker."
-    },
-    {
-        name: "Pascal Huberts",
-        quote:
-            "Een wijze diabeet zij eens 1 bier is geen bier daarom tanken wij bier."
-    },
-    {
-        name: "Pascal Huberts",
-        quote: "liever een kater dan een glasje water."
-    },
-    {
-        name: "Joey Roeters",
-        quote: "beter goed gejat dan slecht bedacht."
-    }
-];
+let quotes;
+fetch(window.location.protocol + "//" + window.location.hostname + "/quotes/quotes/core/quotes.php").then(data => data.json()).then(data => quotes = data);
+
 
 const quotebtn = document.querySelector("#quotebtn");
 const quoteauthor = document.querySelector("#quoteauthor");
@@ -42,6 +10,6 @@ quotebtn.addEventListener("click", displayquote);
 
 function displayquote() {
     let number = Math.floor(Math.random() * quotes.length);
-    quoteauthor.innerHTML = quotes[number].name;
+    quoteauthor.innerHTML = quotes[number].maker;
     quote.innerHTML = quotes[number].quote;
 }
