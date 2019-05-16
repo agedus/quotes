@@ -1,5 +1,5 @@
 let quotes;
-fetch(window.location.protocol + "//" + window.location.hostname + "/quotes/quotes/core/quotes.php").then(data => data.json()).then(data => quotes = data);
+fetch(window.location.protocol + "//" + window.location.hostname + "/core/quotes.php").then(data => data.json()).then(data => quotes = data);
 
 
 const quotebtn = document.querySelector("#quotebtn");
