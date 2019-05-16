@@ -8,7 +8,7 @@ const quotes = [
         quote: "Gepenetreerde kanker moeder."
     },
     {
-        name: "Jurrie Piek",
+        name: "Harm Brouwer",
         quote: "Ik word genomen in me achterste door mijn eerste biertje."
     },
     {
