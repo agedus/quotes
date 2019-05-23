@@ -147,3 +147,35 @@ h1 {
     0%, 100% {top: -15%; opacity: 0;}
     30%, 70% {top: 10%; opacity: 1}
 }
+
+/*ControlPanel*/
+
+.CPbtn {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 7px;
+    font-size: 30px;
+    outline: none;
+    color: #fff;
+;
+}
+
+#CPbtn_V {
+    background-color: green;
+}
+
+#CPbtn_X{
+    background-color: red;
+}
+
+.tb_box {
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+#s_quote {
+    width: 50%;
+}

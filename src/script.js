@@ -20,6 +20,7 @@ function displayquote() {
     quote.innerHTML = quotes[number].quote;
 }
 
+
 popupbtn.addEventListener("click", displaypopup);
 
 function displaypopup() {
@@ -71,5 +72,22 @@ function dropboxStatus(data) {
         document.getElementById("newQuote").value = "";
         document.getElementById("newMaker").value = "";
 
+    }
+}
+
+
+function transfer(status, value){
+    if(status){
+        if(window.location.hostname == "agedus.nl") {
+            fetch()
+        }else{
+
+        }
+
+    }
+    else if (!status){
+
+    }else{
+        throw new Error("hij doet nie");
     }
 }
