@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <?php
         require("core/head.php");
-//        require("core/quotesPending.php");
     ?>
 
 </head>

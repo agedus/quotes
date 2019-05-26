@@ -4,6 +4,13 @@ include("database-connection.php");
 $quote = $_GET["newQuote"];
 $maker = $_GET["newMaker"];
 
+//replacing text//
+$tags = ["<", ">", "/",".", ";", "'", "[", "]", "{", "}"];
+$empty = ["", "", "", "", "", "", "", "", "", ""];
+
+$quote = str_replace($tags,$empty,$quote);
+$maker = str_replace($tags,$empty,$maker);
+
 $data = $connection_db->prepare("SELECT quote FROM quotes WHERE quote=?");
 $data->execute([$quote]);
 $data = $data->rowCount();

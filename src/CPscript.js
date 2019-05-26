@@ -6,7 +6,7 @@ function transfer(status, value) {
             fetch(`${window.location.protocol}//${window.location.hostname}/quotes/quotes/core/transfer.php?id=${value}&status=${status}`);
             setTimeout(function () {FE(false);}, 200);
         }
-    }
+}
 
 if(window.location.hostname == "agedus.nl") {
     FE(true)
