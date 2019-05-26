@@ -5,11 +5,9 @@ $quote = $_GET["newQuote"];
 $maker = $_GET["newMaker"];
 
 //replacing text//
-$tags = ["<", ">", "/",".", ";", "'", "[", "]", "{", "}"];
-$empty = ["", "", "", "", "", "", "", "", "", ""];
-
-$quote = str_replace($tags,$empty,$quote);
-$maker = str_replace($tags,$empty,$maker);
+$quote = strip_tags($quote);
+$maker = strip_tags($maker);
+//
 
 $data = $connection_db->prepare("SELECT quote FROM quotes WHERE quote=?");
 $data->execute([$quote]);
